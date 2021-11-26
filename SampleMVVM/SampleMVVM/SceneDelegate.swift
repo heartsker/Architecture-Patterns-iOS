@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  SampleMVC
+//  SampleMVVM
 //
 //  Created by Daniel Pustotin on 26.11.2021.
 //

@@ -28,12 +28,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeButton(_ sender: UIButton) {
-        model.changeColor()
-        switch model.color {
+        switch label.textColor! {
         case .orange:
-            label.textColor = .orange
-        case .purple:
             label.textColor = .purple
+        default:
+            label.textColor = .orange
         }
     }
     
@@ -42,10 +41,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        label.textColor = .orange
         model.changeText()
         updateLabel()
-
+        
     }
 
     // MARK: Request to the model

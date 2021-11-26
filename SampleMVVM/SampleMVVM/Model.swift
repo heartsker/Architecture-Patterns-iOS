@@ -7,16 +7,10 @@
 
 import Foundation
 
-enum ColorSet: String {
-    case orange
-    case purple
-}
-
 struct Model {
     // MARK: Properties
     var text: String = ""
     var length: Int = 5
-    var color: ColorSet = .orange
 
     private var minLenght = 2
     private var maxLenght = 10
@@ -41,14 +35,5 @@ struct Model {
         return String((0 ..< length).map{ _ in
             symbols.randomElement()!
         })
-    }
-    
-    public mutating func changeColor() {
-        switch color {
-        case .orange:
-            color = .purple
-        case .purple:
-            color = .orange
-        }
     }
 }
